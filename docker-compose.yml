@@ -1,0 +1,20 @@
+
+version: "3.9"
+
+services:
+
+  members-aggregator:
+    container_name: members-aggregator
+    build:
+      context: ./
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - FLASK_APP=src/app
+      - FLASK_RUN_PORT=8000
+      - FLASK_ENV=development
+      - FLASK_SOURCES_URL=https://api1.com?member_id={member_id} https://api2.com?member_id={member_id} https://api3.com?member_id={member_id}
+      - FLASK_SOURCES_URL_TIMEOUT=1
+      - FLASK_DEFAULT_AGGREGATION_STRATEGY=AVG
