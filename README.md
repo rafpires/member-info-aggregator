@@ -19,7 +19,7 @@ Version 3.10  (for libraries version see `requirements.txt`)
 You can:
 1. Run the tests: `pytest`
 
-The tests use the requests-mock to mock the external APIs requests and simulte different scenarions. They make take a couple extra seconds to run because one of them simulates the situation where all external APIs are down.
+The tests use the requests-mock to mock the external APIs requests and simulte different scenarions. They may take a couple extra seconds to run because one of them simulates the situation where all external APIs are down.
 
 2. Run the server with docker-compose `docker-compose up`
 
